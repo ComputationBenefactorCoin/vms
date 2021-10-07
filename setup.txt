@@ -1,0 +1,4 @@
+sudo docker build -f docker/Dockerfile.load_simulator --tag eventhorizonlabseu/auditor-load-simulator:latest .
+sudo docker run -it --rm eventhorizonlabseu/auditor-load-simulator:latest
+sudo docker exec -it f98de752e1ac /bin/sh
+sudo docker push eventhorizonlabseu/auditor-load-simulator:latest

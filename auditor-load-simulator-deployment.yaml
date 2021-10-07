@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auditor-load-simulator
+  labels:
+    app: auditor-load-simulator
+spec:
+  selector:
+    matchLabels:
+      app: auditor-load-simulator
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: auditor-load-simulator
+    spec:
+      containers:
+        - name: auditor-load-simulator
+          image: eventhorizonlabseu/auditor-load-simulator:latest
